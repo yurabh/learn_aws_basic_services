@@ -15,10 +15,10 @@ public class S3Bucket {
     private static final String REGION = "us-east-1";
     private static final String bucketName = "number-phone-bucket";
     private static final String key = "phones/phones-lists.txt";
-    private static final String accessKey = "AKIA4PJP54IWOMHBVZS7";
-    private static final String secretKey = "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";
+    private static final String accessKey = "";
+    private static final String secretKey = "";
     private static final AWSCredentials credentials = new BasicAWSCredentials(accessKey, secretKey);
-    private static final File file = new File("C:\\Users\\Yuriy_Bahlay\\IdeaProjects\\learn_aws_basic_services\\phones-lists.txt");
+    private static final File file = new File("");
     private static final AmazonS3 amazonS3 = AmazonS3ClientBuilder
             .standard()
             .withCredentials(new AWSStaticCredentialsProvider(credentials))
