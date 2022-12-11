@@ -16,12 +16,21 @@
     <artifactId>learn_aws_basic_services</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>learn_aws_basic_services</name>
-
     <properties>
         <java.version>17</java.version>
-        <aws-java-sdk-s3.version>1.11.163</aws-java-sdk-s3.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-bom</artifactId>
+                <version>1.11.549</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
@@ -31,8 +40,12 @@
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-s3</artifactId>
-            <version>${aws-java-sdk-s3.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-rds</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>
