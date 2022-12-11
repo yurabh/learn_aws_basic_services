@@ -11,7 +11,7 @@ import java.util.List;
 import static com.learn.aws.basic.services.utils.AwsUtils.CREDENTIALS;
 import static com.learn.aws.basic.services.utils.AwsUtils.REGION;
 
-public class RdsMySql {
+public class Rds {
     private static final AmazonRDS amazonRDS = AmazonRDSClientBuilder
             .standard()
             .withCredentials(new AWSStaticCredentialsProvider(CREDENTIALS))
