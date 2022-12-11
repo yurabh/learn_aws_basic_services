@@ -5,12 +5,12 @@ import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.amazonaws.services.s3.model.GetObjectRequest;
 
-import static com.learn.aws.basic.services.AwsUtils.CREDENTIALS;
-import static com.learn.aws.basic.services.AwsUtils.DESTINATION_BUCKET_NAME;
-import static com.learn.aws.basic.services.AwsUtils.FILE;
-import static com.learn.aws.basic.services.AwsUtils.REGION;
-import static com.learn.aws.basic.services.AwsUtils.SOURCE_BUCKET_NAME;
-import static com.learn.aws.basic.services.AwsUtils.SOURCE_KEY;
+import static com.learn.aws.basic.services.utils.AwsUtils.CREDENTIALS;
+import static com.learn.aws.basic.services.utils.AwsUtils.DESTINATION_BUCKET_NAME;
+import static com.learn.aws.basic.services.utils.AwsUtils.FILE;
+import static com.learn.aws.basic.services.utils.AwsUtils.REGION;
+import static com.learn.aws.basic.services.utils.AwsUtils.SOURCE_BUCKET_NAME;
+import static com.learn.aws.basic.services.utils.AwsUtils.SOURCE_KEY;
 
 public class S3Bucket {
 
