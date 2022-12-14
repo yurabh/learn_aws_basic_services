@@ -28,7 +28,7 @@ public class S3Bucket {
         return amazonS3.doesObjectExist(SOURCE_BUCKET_NAME, SOURCE_KEY);
     }
 
-    private static void getContentFromFileByBucketNameAndKey() {
+    private static void getObjectFromFileByBucketNameAndKey() {
         GetObjectRequest objectRequest = new GetObjectRequest(SOURCE_BUCKET_NAME, SOURCE_KEY);
         if (checkIfS3BucketExists() && checkIfObjectExists()) {
             amazonS3.getObject(objectRequest, FILE);
@@ -40,7 +40,7 @@ public class S3Bucket {
     }
 
     public static void main(String[] args) {
-        getContentFromFileByBucketNameAndKey();
+        getObjectFromFileByBucketNameAndKey();
         moveObjectFromSourceBucketToDestinationBucket();
     }
 }

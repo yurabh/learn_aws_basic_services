@@ -45,7 +45,10 @@
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-rds</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-dynamodb</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
