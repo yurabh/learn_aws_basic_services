@@ -28,18 +28,25 @@ public class Sqs {
     }
 
     private static void receiveMessageFromQueue() {
-        GetQueueUrlResult urlResult = amazonSQS.getQueueUrl(QUEUE);
-        ReceiveMessageResult receiveMessageResult = amazonSQS.receiveMessage(urlResult.getQueueUrl());
+        GetQueueUrlResult queueUrl = amazonSQS.getQueueUrl(QUEUE);
+        ReceiveMessageResult receiveMessageResult = amazonSQS.receiveMessage(queueUrl.getQueueUrl());
         receiveMessageResult.getMessages().forEach(message -> {
             System.out.println("Queue messageId: " + message.getMessageId());
             System.out.println("Queue message body:  " + message.getBody());
-            System.out.println("Remove message: " + amazonSQS.deleteMessage(urlResult.getQueueUrl(), message.getReceiptHandle()));
         });
+    }
+
+    private static void deleteMessageFromQueue() {
+        GetQueueUrlResult queueUrl = amazonSQS.getQueueUrl(QUEUE);
+        ReceiveMessageResult receiveMessageResult = amazonSQS.receiveMessage(queueUrl.getQueueUrl());
+        receiveMessageResult.getMessages()
+                .forEach(message -> System.out.println("Remove message: " + amazonSQS.deleteMessage(queueUrl.getQueueUrl(), message.getReceiptHandle())));
     }
 
     public static void main(String[] args) {
         createQueue();
         sendMessageToTheQueue();
         receiveMessageFromQueue();
+        deleteMessageFromQueue();
     }
 }
