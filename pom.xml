@@ -15,7 +15,7 @@
 
     <groupId>com.learn.aws.basic.services</groupId>
     <artifactId>learn_aws_basic_services</artifactId>
-    <version>0.0.4</version>
+    <version>0.0.5</version>
 
     <properties>
         <java.version>17</java.version>
@@ -53,6 +53,10 @@
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-sqs</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.amazonaws</groupId>
+            <artifactId>aws-java-sdk-sns</artifactId>
         </dependency>
     </dependencies>
 
