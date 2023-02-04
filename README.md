@@ -1,4 +1,4 @@
-                                               Learn basic aws services
+                                                Learn basic aws services
 
 1)About the project.
 
